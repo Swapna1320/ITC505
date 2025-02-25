@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Delivery in Webpages</title>
+    
+    <!-- Importing a unique font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Fruktur', cursive;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Delivering Fonts to a Client Browser</h1>
+        <p>Using a web font provider like Google Fonts is one of the easiest methods to provide a client with a custom font.  We just include a link to the font in our HTML document, which is hosted by Google.  This makes sure the user doesn't need to have the font installed on their computer because it loads dynamically when the webpage is viewed.</p>
+        <h2>Steps to Implement</h2>
+        <ol>
+            <li>I choosed a font from <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</li>
+            <li>Include the provided link inside the &lt;head&gt; section of my HTML document.</li>
+            <li>And applied the font to elements using CSS.</li>
+        </ol>
+        <p>For this page I went with 'Fruktur' font, which has a funky, playful appearance. This font is unlikely to be pre-installed on most devices, making it an ideal choice for this lab.</p>
+    </div>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
