@@ -10,6 +10,45 @@
   <div id="story"></div>
   <div id="choices"></div>
   <img id="storyImage" src="images/start.jpg" alt="Scene Image">
+
+  <div id="addendumButtonContainer">
+    <button id="addendumButton">Show Addendum</button>
+  </div>
+
+  <div id="addendum" class="hidden">
+    <h2>Game Addendum</h2>
+    
+    <h3>1. Process Overview</h3>
+    <p>
+      I started with a formula of the story's basic framework that included a starting point along with no fewer than eight distinctive finishing points that met the requirements. I created a fantastical storyline about escaping from the Cyber Academy which properly matches the technological theme while it opens up opportunities for multiple branching outcomes.
+    </p>
+
+    <h3>2. Planning & Structure</h3>
+    <p>
+      I organized the story into a system that uses decision trees as its structure. For each decision made, the system leads to different scenes which contain their own textual content and visual display together with user selection options. I designed the JavaScript by using a main story object to maintain logical structure and data functionality.
+    </p>
+
+    <h3>3. Creative Choices</h3>
+    <ul>
+      <li><strong>Setting:</strong> Students at the tech academy can learn various possibilities such as terminal hacking and vent exploration as well as data theft.</li>
+      <li><strong>Design:</strong> The user interface presented both straightforward design and crystal-clear elements through presenting one scene image and easily identifiable buttons.</li>
+      <li><strong>Endings:</strong> Various outcomes were included such as escape from the forest and being caught by police or entering the academy and remaining in hiding forever.</li>
+    </ul>
+
+    <h3>4. Technical Highlights</h3>
+    <ul>
+      <li><strong>JavaScript DOM manipulation:</strong> Enabled dynamic change of the story text alongside image display and choice modification.</li>
+      <li><strong>Reusable Functions:</strong> The application contains three reusable functions—startGame combined with updatePage and endGame.</li>
+      <li><strong>Dynamic Image Display:</strong> I made sure the images display new content throughout the story to enhance the immersive experience.</li>
+      <li><strong>Timestamp:</strong> The application displays the timestamp of the most recent update through document.lastModified.</li>
+    </ul>
+
+    <h3>5. Challenges</h3>
+    <p>
+      A key challenge emerged from the relationship between code selections and their corresponding outcomes since code organization required attention. A single-story object simplified both maintaining narrative logic and enabling growth of the story content. The main difficulty for this project involved making sure each possible conclusion generated its unique visual display as well as verifying the accessibility of all narrative routes.
+    </p>
+  </div>
+
   <footer>
     <p>Last updated: <span id="lastModified"></span></p>
   </footer>
