@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm - Merge Sort</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sorting Algorithm: Merge Sort</h1>
+    </header>
+
+    <div class="layout">
+        <!-- Sidebar Section -->
+        <nav class="sidebar">
+            <p><a href="#">Home</a></p>
+            <p><a href="#">About</a></p>
+            <p><a href="#">Contact</a></p>
+        </nav>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <h2>Enter numbers to sort:</h2>
+            <input type="text" id="numberInput" placeholder="e.g. 5,3,8,1,4">
+            <button onclick="performSort()">Sort</button>
+            <button onclick="generateRandomArray()">Generate Random Array</button>
+            
+            <h3>Sorting Process:</h3>
+            <ul id="sortingSteps"></ul>
+            
+            <h3>Sorted Output:</h3>
+            <p id="sortedOutput"></p>
+        </main>
+
+        <!-- Advertisement Section -->
+        <aside class="advertisement">
+            <a href="https://www.amazon.com/Gucci-Pre-Loved-Leather-Marmont-Handle/dp/B0DYV4LPPC/ref=sr_1_2?ie=UTF8&keywords=Gucci&sr=1-2&qid=1743471722&content-id=amzn1.sym.e669f1d9-ac60-4fdf-b16a-cb1ee0161ead&pd_rd_w=z14Oi&dib=eyJ2IjoiMSJ9.V7XnCEJPxITVv2G8XSH-cB7coc7UST1kFvCLvAbceB6JjYFv8Z_JKe57rywcHgBCyUmXe0_DYyJpH0plCNJk2fHvldQS9Jaog0zRQPSgex_0QDqQp-kxyssYvZBAQv4z7lhFUiM29WN8MFtoZLAT3gCh-B5dYPhiQnkP_K6tiNmsZB0avDTjIMkr3cx9UlWKAgOUpD4ExhhEKrn-1faTX4aCg9Hfa39UlGlVQboDh3XrEl_1q9ypNX6ZOj0E6toHSv9gvWaqU4up_lBmJykYZTQdwXcrE-sLY2j8BD_0tOI.yB1Z7n2i_MFSCXAZAyoOV08aRlwzVTYths139fFgH8Q&dib_tag=se&pd_rd_r=e32adce6-56b3-4544-bb10-098e54a4dfc7&refinements=p_89%3AGucci&ASIN=B0DYV4LPPC&_encoding=UTF8&channel=designerIndex&pd_rd_wg=NKUyY&ref_=lx_bd" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/71HvxYCUCVL._AC_UL750_FMwebp_QL65_.jpg" alt="Gucci Pre-Loved Leather Marmont Handle" style="width: 100%; height: auto; object-fit: cover;">
+            </a>
+        </aside>
+    </div>
+
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p>The project required me to design Holy Grail layout and include interactive sorting through JavaScript. I encountered difficulties when maintaining sidebar content alignment while making the main content area adapt in size during large array sorting processes. I adjusted the CSS Grid properties until I accomplished a fixed sidebar width combined with dynamic resizing of the main content area.</p>
+        
+        <p>A display refresh issue occurred when I applied the merge sort algorithm for displaying the sorting process. A problem occurred because the array steps failed to display correctly as a result of placing merge steps improperly within the JavaScript code. I resolved this problem through a solution that linked the 'sortingSteps' element to a dynamic update process within every recursive call of the merge step function.</p>
+        
+        <p>The display of the sorted array through JavaScript failed to appear instantly after users clicked the button. I identified the reason for sorting failure during debugging while discovering that faulty input characters caused the sorting mechanism to break down. The addition of input validation processes enabled the system to accept only valid numbers which solved the problem of improper sorting.</p>
+
+        <p>The final technical challenge existing in the footer caused me to implement fixes for the position of the component. The footer position failed to stay fixed at bottom of the page when page content quantities became minimal. The footer required a fixed positioning so it would stay positioned at the bottom part of the screen independent from content length variations.</p>
+        <p> . </p>
+    </section>
+
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
