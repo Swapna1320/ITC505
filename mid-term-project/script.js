@@ -68,17 +68,22 @@ const story = {
     choices: [], consequence: [], image: "images/server.jpg"
   }
 };
+
 let currentStage = "start";
+
 function startGame() {
   currentStage = "start";
   updatePage();
 }
+
 function updatePage() {
   const stage = story[currentStage];
   document.getElementById("story").textContent = stage.text;
   document.getElementById("storyImage").src = stage.image;
+
   const choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
+
   stage.choices.forEach((choice, index) => {
     const btn = document.createElement("button");
     btn.textContent = choice;
@@ -93,10 +98,18 @@ function updatePage() {
     choicesDiv.appendChild(btn);
   });
 }
+
 function endGame() {
   const stage = story[currentStage];
   document.getElementById("story").textContent = stage.text;
   document.getElementById("storyImage").src = stage.image;
   document.getElementById("choices").innerHTML = "";
 }
+
+// Addendum Toggle
+document.getElementById("addendumButton").addEventListener("click", function() {
+  const addendum = document.getElementById("addendum");
+  addendum.classList.toggle("hidden");
+});
+
 window.onload = startGame;
