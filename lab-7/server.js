@@ -12,7 +12,7 @@ const publicPath = path.join(__dirname, 'public');
 server.use(express.static(publicPath));
 
 // POST handler for the Mad Lib form
-server.post('/ITC505/lab-7/index.html', (req, res) => {
+server.post('/index.html', (req, res) => {
     const { noun, adjective, verb, place, celebrity } = req.body;
 
     // Input validation
