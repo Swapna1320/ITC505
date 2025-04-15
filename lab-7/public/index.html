@@ -26,6 +26,31 @@
         <button type="submit">Create Mad Lib</button>
     </form>
 
+    <div class="addendum">
+        <h2>Addendum</h2>
+        <p>
+          While building this Space Adventure Mad Libs project, I came across a few technical challenges that helped me understand web development more deeply:
+        </p>
+        <ul>
+          <li>
+            <strong>Form Submission Not Reaching Server:</strong> Initially, my form submissions weren’t reaching the Express server. After inspecting the routes and folder structure, I realized the issue was due to a mismatch between the form's `action` path and the server's route. I fixed this by correcting the form path to match the deployed environment.
+          </li>
+          <li>
+            <strong>Deploying on Render:</strong> Getting the app deployed correctly on Render was a bit tricky. My folder structure needed adjustment, especially placing files inside the correct subdirectory. I learned to structure repositories properly and define the right root folder for deployment.
+          </li>
+          <li>
+            <strong>Static Files Not Loading:</strong> At one point, my CSS wasn’t loading. I learned this was because the `express.static()` middleware didn’t match the path where the public folder actually was. After fixing the path with `path.join(__dirname, 'lab-7/public')`, everything worked fine.
+          </li>
+          <li>
+            <strong>Backend Validation:</strong> Even though HTML `required` attributes exist, I made sure to also validate form data on the server side using `if (!noun || !adjective || ...)`, so the server can reject incomplete submissions gracefully.
+          </li>
+          <li>
+            <strong>Clear Output Formatting:</strong> To ensure the final story output was readable and user-friendly, I used template literals for cleaner string interpolation and wrapped the output inside styled `<p>` tags.
+          </li>
+        </ul>
+      </div>
+      
+
     <footer>
         <p>Last updated:
             <span id="lastModified"></span>
