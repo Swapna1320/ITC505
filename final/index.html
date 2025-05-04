@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lights Out Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Lights Out</h1>
+
+  <div id="controls">
+    <button onclick="newGame()">New Game</button>
+    <button onclick="resetBoard()">Reset</button>
+    <span id="moveCounter">Moves: 0</span>
+  </div>
+
+  <div id="gameBoard"></div>
+
+  <section id="addendum">
+    <h2>Addendum</h2>
+    <p>
+      To ensure every puzzle is solvable using the “Chase the Lights” method, I started with a fully off board and applied a series of simulated clicks. This approach avoids random unsolvable configurations. I styled the board for clarity using CSS Grid and toggled lights with immediate neighbor logic (no wrapping). One challenge I faced was preventing out-of-bounds errors when toggling edges, which I fixed by adding bounds checks. This project helped me understand DOM events, logic simulation, and why respecting puzzle rules matters in game design.
+    </p>
+  </section>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
